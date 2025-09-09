@@ -31,11 +31,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp TAB           &kp N1            &kp N2    &kp N3     &kp N4      &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp BACKSPACE
-&kp CAPSLOCK      &kp Q             &kp W     &kp E      &kp R       &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P       &kp RIGHT_SHIFT
-&kp LSHIFT        &kp A             &kp S     &kp D      &kp F       &kp G                            &kp H      &kp J      &kp K      &kp L      &kp SEMI    &kp KP_ENTER
-&kp LEFT_CONTROL  &kp LA(LEFT_ALT)  &kp Z     &kp X      &kp C       &kp V   &kp C_MUTE    &none      &kp B      &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH
-                                    &kp LWIN  &kp SPACE  &kp INSERT  &sl 1   &kp SPACE     &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp TAB           &kp N1            &kp N2    &kp N3  &kp N4      &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0      &kp BACKSPACE
+&kp CAPSLOCK      &kp Q             &kp W     &kp E   &kp R       &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P       &kp RIGHT_SHIFT
+&kp LSHIFT        &kp A             &kp S     &kp D   &kp F       &kp G                            &kp H      &kp J      &kp K      &kp L      &kp SEMI    &kp KP_ENTER
+&kp LEFT_CONTROL  &kp LA(LEFT_ALT)  &kp Z     &kp X   &kp C       &kp V   &kp C_MUTE    &none      &kp B      &kp N      &kp M      &kp COMMA  &kp PERIOD  &kp SLASH
+                                    &kp LWIN  &sl 2   &kp DELETE  &sl 1   &kp SPACE     &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -53,14 +53,24 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&kp ESC  &kp F1  &kp F2    &kp F3        &kp F4     &kp F5                           &kp F6  &kp F7  &kp F8  &kp F9    &kp F10  &kp F11
-&trans   &trans  &trans    &kp UP_ARROW  &trans     &trans                           &kp N6  &kp N7  &kp N8  &kp N9    &kp N0   &kp F12
-&trans   &trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans                           &trans  &trans  &trans  &kp LPAR  &trans   &trans
-&trans   &trans  &trans    &trans        &trans     &trans  &trans           &trans  &trans  &trans  &trans  &trans    &trans   &trans
-                 &trans    &trans        &trans     &trans  &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans
+&kp ESC  &kp F1  &kp F2    &kp F3        &kp F4        &kp F5                           &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
+&trans   &trans  &trans    &kp UP_ARROW  &trans        &trans                           &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans   &trans  &kp LEFT  &kp DOWN      &kp RIGHT     &trans                           &trans  &trans  &trans  &trans  &trans   &trans
+&trans   &trans  &trans    &trans        &trans        &trans  &trans           &trans  &trans  &trans  &trans  &trans  &trans   &trans
+                 &trans    &trans        &kp KP_ENTER  &trans  &kp BACKSPACE    &trans  &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &kp PLUS         &kp KP_MINUS     &kp STAR         &kp SLASH        &kp EQUAL                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans           &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans           &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans           &trans           &trans           &trans     &trans    &trans  &trans  &trans  &trans  &trans
+            >;
         };
     };
 };
