@@ -50,7 +50,7 @@ layers:
   - M
   - ','
   - .
-  - '='
+  - /
   - LWIN
   - {t: '2', h: sticky}
   - DELETE
@@ -59,8 +59,8 @@ layers:
   - SPACE
   - SPACE
   - SPACE
-  - SPACE
   - '-'
+  - '='
   lower:
   - ESC
   - F1
